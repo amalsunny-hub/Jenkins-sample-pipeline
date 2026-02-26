@@ -18,10 +18,10 @@ pipeline {
         }
         stage("Deploy Application"){
             steps{
-                bat ```
+                bat '''
                 taskkill /F /IM python.exe /T 2>nul
                 start /B python app.py
-
+                '''
             }
         }
     }
